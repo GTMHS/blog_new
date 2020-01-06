@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}关于我们{% endblock %}
+{% block nav_about_us_active %}
+active
+{% endblock %}
+{% block nav_about_us_active1 %}
+    active
+{% endblock %}
+{% block content %}
+    <ol class="breadcrumb">
+        <li>当前位置：<a href="#">荣誉资质</a></li>
+        <li class="active"></li>
+    </ol>
+    <div class="page-header" style="margin-top: 10px;">
+        <h1>关于我们 <small>关于我们</small></h1>
+    </div>
+    <p>{{ content.content|safe }}</p>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+产品列表
+{% endblock %}
+{% block nav_blog_active %}
+active
+{% endblock %}
+{% block nav_blog_active1 %}
+active
+{% endblock %}
+{% block head_extend %}
+    <link rel="stylesheet" href="{% static 'css/blog.css'%}">
+{% endblock %}
+{% block content %}
+    <ol class="breadcrumb">
+        <li>当前位置：<a href="#">产品中心</a></li>
+        <li class="active">产品列表</li>
+    </ol>
+    <div class="page-header" style="margin-top: 10px;">
+        <h1>产品中心 <small>产品列表</small></h1>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            产品中心
+        </div>
+        <div class="panel-body">
+            {% for product in products %}
+                <div class="col-sm-5 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{% static 'pic/products/1.jpg' %}" width="242" height="200" alt="...">
+                        <div class="caption">
+                            <h3>{{ product.product_name|truncatechars:15 }}</h3>
+                            <p>{{ product.product_type }}</p>
+                        </div>
+                    </div>
+                </div>
+{#                <div class="col-sm-6 col-md-4">#}
+{#                    <div class="thumbnail">#}
+{#                        <img src="{% static 'pic/products/2.jpg' %}" alt="...">#}
+{#                        <div class="caption">#}
+{#                            <h3>{{ product.product_name }}</h3>#}
+{#                            <p>{{ product.product_type }}</p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="blog">#}
+{#                    <a href="{% url 'blog_detail' blog.pk %}"> <h3>{{ blog.title }}</h3></a>#}
+{#                    <p>{{ blog.content |truncatechars:120 }}</p>#}
+{#                </div>#}
+            {% empty %}
+                <div class="blog">
+                    <h3>暂无博客，敬请期待</h3>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

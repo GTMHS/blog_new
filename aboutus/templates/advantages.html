@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}我们的优势{% endblock %}
+{% block nav_advantage_active %}
+active
+{% endblock %}
+{% block nav_advantage_active1 %}
+    active
+{% endblock %}
+{% block content %}
+    <ol class="breadcrumb">
+        <li>当前位置：<a href="#">我们的优势</a></li>
+        <li class="active"></li>
+    </ol>
+    <div class="page-header" style="margin-top: 10px;">
+        <h1>我们的优势 <small>优势所在</small></h1>
+    </div>
+    <p>{{ content.content|safe }}</p>
+{% endblock %}

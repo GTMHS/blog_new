@@ -25,12 +25,11 @@ SECRET_KEY = 'uxh3ci+1zm7mo(%78ceih%*+pw522-pte*c7rgbcfz%b9bpd)5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.123',
+ALLOWED_HOSTS = ['www.bjhantsing.com',
+                 'www.bjhantsing.cn',
                  '127.0.0.1',
                  '192.168.108.102',
                  ]
-
-
 # Application definition
 
 INSTALLED_APPS = [
